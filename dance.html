@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+
+  </head>
+  <body style="text-align: center;">
+      <!-- <br><br><br><br><br><br> -->
+    <img id="orange" src="https://media.tenor.com/images/052a562e83d68b37c07654c52aa4b913/tenor.gif" alt="">
+    <img id="africa" src="https://i.imgur.com/bF6DCyD.gif" alt="">
+    <img id="danceto" src="https://i.imgur.com/FI6j9YJ.gif" alt="">
+    <img id="obama" src="https://media.giphy.com/media/b1LaznPA8xrP2/giphy.gif" alt="">
+
+
+    <audio controls autoplay>
+  <source src="C:\Users\thisi\OneDrive\Desktop\Minecraft Parody of Moonlight by XXXTENTACION - Minecraft!-[AudioTrimmer.com].mp3" type="audio/mp3">
+Your browser does not support the audio element.
+</audio>
+<!-- <iframe src="C:\Users\thisi\OneDrive\Desktop\Minecraft Parody of Moonlight by XXXTENTACION - Minecraft!-[AudioTrimmer.com].mp3" allow="autoplay" style="display:none" id="iframeAudio"> -->
+</iframe>
+    <script type="text/javascript">
+    d = 0
+    setInterval(function () {
+       if (d % 2 == 0) {
+     	     document.getElementsByTagName('body')[0].style.backgroundColor = '#3c75e0'
+
+       }
+       if (d % 2 !== 0) {
+    		document.getElementsByTagName('body')[0].style.backgroundColor = '#9e3ce0'
+
+       }
+       d++
+    }, 300)
+        orange = document.getElementById('orange')
+        africa = document.getElementById('africa')
+        danceto = document.getElementById('danceto')
+        obama = document.getElementById('obama')
+        function makeNewPosition(){
+
+    // Get viewport dimensions (remove the dimension of the div)
+    // var h = window.innerHeight - 50 - 500;
+    // var w = window.innerWidth - 50 - 500;
+
+    var h = 600
+    var w = 800
+
+    var nh = Math.floor(Math.random() * h);
+    var nw = Math.floor(Math.random() * w);
+
+    return [nh,nw];
+
+}
+        console.log(orange)
+        all = [orange, africa, danceto, obama]
+        setTimeout(function () {
+          for (var i = 0; i < all.length; i++) {
+            console.log(all[i])
+            all[i].style.display = 'none'
+all[i].style.position = 'fixed'
+          }
+          setTimeout(function () {
+                                      setInterval(function () {
+                                          random = all[Math.floor(Math.random() * all.length)]
+                                          random2 = all[Math.floor(Math.random() * all.length)]
+                                          random.style.left = makeNewPosition()[0].toString() + 'px'
+                                          random.style.top = makeNewPosition()[1].toString() + 'px'
+
+                                          // console.log(Math.floor(Math.random() * 100) + 800)
+
+                                          random2.style.left = makeNewPosition()[0].toString() + 'px'
+                                          random2.style.top = makeNewPosition()[1].toString() + 'px'
+
+                                          random.style.display = 'block'
+                                          random2.style.display = 'block'
+
+                                          setTimeout(function () {
+                                            random.style.display = 'none'
+                                            random2.style.display = 'none'
+                                          }, Math.floor(Math.random() * 1900) + 1000)
+                                      }, 2000)
+          }, 1000)
+        }, 1000)
+    </script>
+  </body>
+</html>
